@@ -19,7 +19,7 @@ def control_app_lock(app: str, on: bool) -> str:
         url = f"{EDGE_URL}?app={app}&on={str(on).lower()}"
         r = requests.get(url, timeout=10)
         data = r.json()
-        
+        
         if data.get("ok"):
             return f"{'🔒 已锁定' if on else '🔓 已解锁'} {app}！"
         return f"操作失败：{data.get('error')}"
