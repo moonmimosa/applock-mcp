@@ -1,4 +1,7 @@
 mcp<2
 requests
+starlette
+uvicorn
+
 
 
